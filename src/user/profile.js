@@ -127,6 +127,7 @@ module.exports = function (User) {
         }
         const exists = await User.existsBySlug(userslug);
         if (exists) {
+            console.log("Give me a new User Name")
             throw new Error('[[error:username-taken]]');
         }
 
